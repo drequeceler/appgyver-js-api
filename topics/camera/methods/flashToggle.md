@@ -1,7 +1,7 @@
-# AG.camera.toggleFlash
+# AG.camera.flashToggle
 
 ## Summary
-`toggleFlash()` switches the flash LED of the device's camera on if it is off, and vice versa.
+`flashToggle()` switches the flash LED of the device's camera on if it is off, and vice versa.
 
 The success callback function is triggered if the flash LED is successfully turned on or off.
 
@@ -9,12 +9,12 @@ The failure callback function is triggered if the device does not have a camera 
 
 ## Quick example:
 ```javascript
-AG.camera.toggleFlash();
+AG.camera.flashToggle();
 ```
 
 ## Syntax
 ```javascript
-AG.camera.toggleFlash(successCallback, failureCallback)
+AG.camera.flashToggle(successCallback, failureCallback)
 ```
 
 **Parameters**
