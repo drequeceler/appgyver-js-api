@@ -29,15 +29,17 @@ As is common in JavaScript, many methods of the appgyver.js API take `successCal
 
 To explain how callback functions work, let's look at an example from the AG.geolocation API namespace.
 
-> **Callback functions example**
->
-> We can get the mobile device's current GPS coordinates with the method:
->
-> `AG.geolocation.getCurrentLocation(successCallback(coords), failureCallback)` 
->
-> If the native app layer fails to retrieve the current GPS coordinates, the `failureCallback` function is called. The code in the function is executed, e.g. an error message is displayed.
->
-> If the native app succeeds in retrieving the GPS coordinates, the `successCallback` function is called. The data retrieved by the API call (user GPS coordinates in this case) are passed on to the successCallback function as a parameter. In this case, `coords` contains the GPS coordinates retrieved by the device. The developer is then free to do whatever they want with the data, e.g. display it to the user.
+**Callback functions example**
+
+We can get the mobile device's current GPS coordinates with the method:
+
+`AG.geolocation.getCurrentLocation(successCallback(coords), failureCallback)` 
+
+If the native app layer fails to retrieve the current GPS coordinates, the `failureCallback` function is called. The code in the function is executed, e.g. an error message is displayed.
+
+If the native app succeeds in retrieving the GPS coordinates, the `successCallback` function is called. The data retrieved by the API call (user GPS coordinates in this case) are passed on to the successCallback function as a parameter. In this case, `coords` contains the GPS coordinates retrieved by the device. The developer is then free to do whatever they want with the data, e.g. display it to the user.
+
+**More on callbacks**
 
 Each method's API documentation explains in more detail:
 * The success and failure conditions of the API calls, i.e. what happens in the native layer.
