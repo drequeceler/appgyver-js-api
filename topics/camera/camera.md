@@ -4,11 +4,12 @@ The **AG.camera** namespace contains methods that give access to the mobile devi
 
 ## Methods ##
 * [AG.camera.choosePicture](methods/choosePicture.md)
-* [AG.camera.flashOn](methods/flashOn.md)
 * [AG.camera.flashOff](methods/flashOff.md)
+* [AG.camera.flashOn](methods/flashOn.md)
+* [AG.camera.flashToggle](methods/flashToggle.md)
 * [AG.camera.takePicture](methods/takePicture.md)
 * [AG.camera.takeVideo](methods/takeVideo.md)
-* [AG.camera.flashToggle](methods/flashToggle.md)
+
 
 ## Full example ##
 
