@@ -5,6 +5,7 @@ The **AG.form** namespace gives access to form handling javascript helpers. They
 ## Methods
 
 * [AG.form.serialize](methods/serialize.md)
+* [AG.form.hijack](methods/hijack.md)
 
 ## Full example
 
