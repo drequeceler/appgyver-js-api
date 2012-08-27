@@ -15,6 +15,7 @@ Appgyver.js is a JavaScript library used to access native features of your mobil
 * [AG.media](topics/media/media.md)
 * [AG.navigation](topics/navigation/navigation.md)
 * [AG.parameters](topics/parameters/parameters.md)
+* [AG.form](topics/form/form.md)
 * [AG.storage](topics/storage/storage.md)
 
 ## The appgyver.js library explained
@@ -33,7 +34,7 @@ To explain how callback functions work, let's look at an example from the AG.geo
 
 We can get the mobile device's current GPS coordinates with the method:
 
-`AG.geolocation.getCurrentLocation(successCallback(coords), failureCallback)` 
+`AG.geolocation.getCurrentLocation(successCallback(coords), failureCallback)`
 
 If the native app layer fails to retrieve the current GPS coordinates, the `failureCallback` function is called. The code in the function is executed, e.g. an error message is displayed.
 
@@ -53,7 +54,7 @@ The AppGyver Client renders your app's HTML5 content in WebKit-powered windows c
 
 Currently, we are in the process of renewing our navigation and native GUI code. To help the transition, our Preview client currently has two modes: Edge and normal mode. (A project's mode can be set under its *Config* tab in Studio. Normal mode is recommended for actual development.)
 
-For the time being, Edge and normal modes have slightly different functionalities when it comes to navigation and rendering content: 
+For the time being, Edge and normal modes have slightly different functionalities when it comes to navigation and rendering content:
 
 In **normal mode** navigation, each tab bar tab is a separate view. This means that changing between tabs leaves the original tab view intact, including all JavaScript that might be running. When you click on a link on a page, the view loads a new HTML5 page and discards the old one. If you go back to the original page e.g. via the native back button, the content is loaded from scratch. To preserve e.g. the scroll state of the original page, you should do it via separate JavaScript.
 
