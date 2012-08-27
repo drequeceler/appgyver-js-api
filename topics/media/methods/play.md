@@ -9,7 +9,7 @@ Note that playing .mp3 files has a slight delay compared to .wav files due to th
 
 ## Quick example:
 ```javascript
-AG.media.play("audio/myaudio.wav");
+AG.media.play("Application/default/assets/myaudio.wav");
 ```
 
 ## Syntax
@@ -20,7 +20,7 @@ AG.media.play(filename)
 **Parameters**
 
 * *string* **filename**<br>
-  The filename and path of the audio file to play. The path is relative to the app's `views` directory.
+  The filename and path of the audio file to play. The path is relative to the root directory of the app's file structure, so if your audio file is at `MyStudioProject/views/default/assets/audio.wav`, the correct API call is `AG.media.play("Application/default/assets/audio.wav")`.
 
 ## Returns
 Nothing.
