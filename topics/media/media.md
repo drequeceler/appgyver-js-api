@@ -19,7 +19,7 @@ The **AG.media** namespace contains methods that allow you to record and play ba
     document.addEventListener("DOMContentLoaded", function() {
       
       var startRecord = function() {
-        AG.media.startRecordingAudio("myaudio");        
+        AG.media.startRecordingAudio("myaudio.wav");        
       }
       
       var stopRecord = function() {
@@ -27,7 +27,7 @@ The **AG.media** namespace contains methods that allow you to record and play ba
       }
       
       var play = function() {
-        AG.media.play("myaudio");
+        AG.media.play("myaudio.wav");
       }
       
       document.querySelector("button#start_record").addEventListener("touchstart", startRecord);
