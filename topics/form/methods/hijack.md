@@ -5,7 +5,7 @@
 
 ## Quick example:
 ```javascript
-var valueobject = AG.form.hijack(document.querySelector("form#myForm"), {
+AG.form.hijack(document.querySelector("form#myForm"), {
   success: function(xhr) {
     // ajax request was successful
   },
