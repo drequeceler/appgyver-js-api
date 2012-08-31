@@ -20,7 +20,7 @@ AG.device.getLocale(successCallback(data), failureCallback)
 **Parameters**
 
 * *function* **successCallback**<br>
-  The success callback function gets the device UDID as a callback parameter:
+  The success callback function gets the device locale data as a callback parameter:
     * *JSON* **data**<br>
         A JSON object containing the locale information as key-value pairs, with the following keys (all *string*s):
         * localeIdentifier
