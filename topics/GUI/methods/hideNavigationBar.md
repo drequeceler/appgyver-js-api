@@ -23,4 +23,4 @@ None.
 Nothing.
 
 ## Supported platforms
-* iOS, Android
+* iOS

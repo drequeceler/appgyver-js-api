@@ -12,8 +12,3 @@ The [Android Preview client](https://play.google.com/store/apps/details?id=com.a
 * [AG.file.preview](../topics/file/methods/preview.md)
 * [AG.file.unzip](../topics/file/methods/unzip.md)
 * [AG.GUI.alert](../topics/GUI/methods/alert.md)
-* [AG.GUI.hideNavigationBar](../topics/GUI/methods/hideNavigationBar.md)
-* [AG.GUI.hideNavigationBarRightButton](../topics/GUI/methods/hideNavigationBarRightButton.md)
-* [AG.GUI.openLayer](../topics/GUI/methods/openLayer.md)
-* [AG.GUI.showNavigationBar](../topics/GUI/methods/showNavigationBar.md)
-* [AG.GUI.showNavigationBarRightButton](../topics/GUI/methods/showNavigationBarRightButton.md)

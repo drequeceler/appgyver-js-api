@@ -26,4 +26,4 @@ AG.GUI.openLayer(location)
 Nothing.
 
 ## Supported platforms
-* iOS, Android
+* iOS

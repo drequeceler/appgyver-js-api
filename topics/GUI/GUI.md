@@ -16,3 +16,4 @@ We are currently in the process of updating our native GUI and navigation code, 
 * [AG.GUI.alert](methods/alert.md)
 * [AG.GUI.showRightButton](methods/showRightButton.md)
 * [AG.GUI.hideRightButton](methods/hideRightButton.md)
+* [AG.GUI.reloadStartURL](methods/reloadStartURL.md)

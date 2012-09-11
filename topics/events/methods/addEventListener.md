@@ -14,8 +14,8 @@
 
 * **focus**<br>
  Happens when the current view gains focus (after returning from another view or after going to home screen and back).
-* **lostFocus**<br>
- Happens when navigation bar back navigation button is tapped.
+* **lostFocus** / **unfocus**<br>
+ Happens when navigation bar back navigation button is tapped. The two event names perform identical events.
 
 The success callback function of the event listener is fired every time the listened event happens.
 
@@ -37,7 +37,8 @@ AG.events.addEventListener(event, successCallback)
   The event that the event listener listens to. Possible values are:
     * `"focus"`
     * `"topDoubleTapped"`
-    * `"lostFocus"`
+    * `"lostFocus"` / `"unfocus"`
+ 
     See above for more details on when the different events are triggered.
     
 * *function* **successCallback**<br>

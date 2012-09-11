@@ -24,4 +24,4 @@ AG.GUI.showNavigationBar(title)
 Nothing.
 
 ## Supported platforms
-* iOS, Android
+* iOS

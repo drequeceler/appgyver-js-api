@@ -1,7 +1,3 @@
-# Official appgyver.js API documentation, version 0.9.0
+# appgyver.js API documentation, version 0.9.1
 
-Due to the way GitHub handles relative paths in Markdown links, the API front page is located at [index.md](https://github.com/AppGyver/appgyver-js-api/blob/version/0.9.0/index.md).
-
-*For those interested, the problem is that Markdown links are relative to the file's location (unless you give a full URL), but README.md can "exist" in two locations, depending on how you access it. If you simply open the URL https://github.com/AppGyver/appgyver-js-api, the README.md file (rendered automatically below the repo's files list) thinks that all the links are relative to /appgyver-js-api/, where in truth the files are located in /appgyver-js-api/blob/version/VERSION_NUMBER/. Now, if you click to actually open the the README.md file, Markdown thinks that all links are relative /appgyver-js-api/blob/version/VERSION_NUMBER/, which is correct, but then the benefit of having the README.md file render automatically is wasted.* 
-
-*To ensure that version numbers and forking works correctly, we opted to use separate index.md files that are never rendered automatically, and thus always use the correct relative path for links. We apologize for the inconvenience.*
+The API front page is located at [index.md](https://github.com/AppGyver/appgyver-js-api/blob/version/0.9.1/index.md).
