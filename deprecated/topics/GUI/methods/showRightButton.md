@@ -1,4 +1,4 @@
-# AG.GUI.showRightButton
+# ~~AG.GUI.showRightButton~~ (deprecated)
 
 ## Summary
 `showRightButton()` shows the native top right button in the navigation bar.
@@ -9,14 +9,14 @@ This method works only in normal mode.
 
 ## Quick example:
 ```javascript
-var hello = function() { AG.GUI.alert("Hello!")}
+var hello = function() { navigatior.notification.alert("I am an alert box", false, "Hello!") }
 
-AG.GUI.showNavigationBarRightButton("Say hello", hello);
+AG.GUI.showRightButton("Say hello", hello);
 ```
 
 ## Syntax
 ```javascript
-AG.GUI.showNavigationBarRightButton(title, recurringCallback)
+AG.GUI.showRightButton(title, recurringCallback)
 ```
 
 **Parameters**

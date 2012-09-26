@@ -1,21 +1,12 @@
 # AG.events.addEventListener
 
 ## Summary
-`addEventListener()` adds an event listener to the current view that listens for the specified event. The available events and their functions are slightly different between normal mode and Edge mode:
-
-**Normal mode events:**
+`addEventListener()` adds an event listener to the current webview that listens for the specified event. The available events are:
 
 * **focus**<br>
- Happens when the current tab bar view gains focus (after switching to another tab).
-* **topDoubleTapped**<br>
- Happens when the user double-taps the navigation bar.
-
-**Edge mode events:**
-
-* **focus**<br>
- Happens when the current view gains focus (after returning from another view or after going to home screen and back).
+ Happens when the current webview gains focus (after returning from another webview or after going to home screen and back).
 * **lostFocus** / **unfocus**<br>
- Happens when navigation bar back navigation button is tapped. The two event names perform identical events.
+ Happens when navigation bar's native back button is tapped. The two event names perform identical events.
 
 The success callback function of the event listener is fired every time the listened event happens.
 
@@ -36,7 +27,6 @@ AG.events.addEventListener(event, successCallback)
 * *string* **event**<br>
   The event that the event listener listens to. Possible values are:
     * `"focus"`
-    * `"topDoubleTapped"`
     * `"lostFocus"` / `"unfocus"`
  
     See above for more details on when the different events are triggered.
@@ -48,5 +38,15 @@ AG.events.addEventListener(event, successCallback)
 
 Nothing.
 
+## Legacy mode
+
+In Legacy mode, the available events are:
+
+* **focus**<br>
+ Happens when the current tab bar view gains focus (after switching to another tab).
+* **topDoubleTapped**<br>
+ Happens when the user double-taps the navigation bar.
+
+
 ## Supported platforms
-* iOS, Android (Edge mode events only)
+* iOS, Android

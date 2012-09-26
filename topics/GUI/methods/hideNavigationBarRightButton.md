@@ -3,8 +3,6 @@
 ## Summary
 `hideNavigationBarRightButton()` hides the native right button from the navigation bar.
 
-This method currently works only in Edge mode.
-
 ## Quick example:
 ```javascript
 AG.GUI.hideNavigationBarRightButton();
@@ -23,4 +21,4 @@ None.
 Nothing.
 
 ## Supported platforms
-* iOS
+* iOS (not in Legacy mode)

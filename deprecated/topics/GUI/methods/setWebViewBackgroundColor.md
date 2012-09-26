@@ -1,4 +1,6 @@
-# AG.GUI.setWebViewBackgroundColor
+# ~~AG.GUI.setWebViewBackgroundColor~~  (deprecated)
+
+*This method is deprecated and only available in Legacy mode.*
 
 ## Summary
 `setWebViewBackgroundColor()` sets the background color for the current view, shown if the user scrolls over the document boundaries.
@@ -22,4 +24,4 @@ AG.GUI.setTopBarImagePath(color)
 Nothing.
 
 ## Supported platforms
-* iOS
+* iOS (Legacy mode only)

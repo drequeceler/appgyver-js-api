@@ -1,10 +1,6 @@
 # AG.events
 
-The **AG.events** namespace gives access to various event listeners that get fired when specific conditions are met. These event listeners are view-specific, meaning that an event listener added to one view won't get fired in another and so on.
-
-### Edge mode notes
-
-Currently, `focus` has extended functionality in Edge mode (e.g. registering going to the home screen and back) and `lostFocus` only works in Edge mode.
+The **AG.events** namespace gives access to various event listeners that get fired when specific conditions are met. These event listeners are webview-specific, meaning that an event listener added to one webview won't get fired when the condition is met in another webview.
 
 ## Methods
 
@@ -31,13 +27,13 @@ Currently, `focus` has extended functionality in Edge mode (e.g. registering goi
               
               if (lst != "removeAll") {  
                 AG.events.addEventListener(lst, function () {
-                  AG.GUI.alert("Event listener fired", lst);
+                  navigator.notification.alert(lst, false, "Event listener fired:");
                 });
-                AG.GUI.alert("Event listener added:", lst);
+                navigator.notification.alert(lst, false, "Event listener added:");
                 
               } else {                
                 AG.events.removeAllEventListeners();
-                AG.GUI.alert("All event listeners removed!");                
+                navigator.notification.alert("All event listeners removed!");                
               }
 
             });
@@ -48,9 +44,8 @@ Currently, `focus` has extended functionality in Edge mode (e.g. registering goi
   <body>
     <h1>AG.events example</h2>
       
-    <button data-listener="topDoubleTapped">Add topDoubleTapped listener</button><br>
     <button data-listener="focus">Add focus listener</button><br>
-    <button data-listener="lostFocus">Add lostFocus listener (Edge mode only)</button><br>
+    <button data-listener="lostFocus">Add lostFocus listener</button><br>
     <br>
     <br>
     <button data-listener="removeAll">Remove all event listeners</button>

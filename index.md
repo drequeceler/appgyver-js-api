@@ -1,43 +1,65 @@
-# appgyver.js API documentation, version 0.9.1
+# appgyver.js API documentation, version 0.9.2
 
-Appgyver.js is a JavaScript library used to access native features of your mobile device in your HTML5-based app. Think of it as a bridge between your application's HTML documents and your mobile device's hardware and proprietary software. Appgyver.js also provides you with some non-hardware related features, such as native GUI elements and transitions, useful abstractions of commonly used functions such as XMLHttpRequests and more.
+As of version 0.9.2, AppGyver uses [Apache Cordova](http://incubator.apache.org/cordova/) (also distributed as PhoneGap) as the main native bridge between your JavaScript and the native wrapper app. New projects in AppGyver Studio automatically include a `<script src="http://localhost/cordova-2.0.0.js">` tag to load the Cordova library.
+
+We've deprecated most of the old `appgyver.js` APIs in favor of Cordova. Please see the [Cordova API documentation](http://docs.phonegap.com) for a list of supported APIs.
+
+However, there are some things that Cordova doesn't provide, so `appgyver.js` remains to give you access to AppGyver's native UI elements, navigation magic and other enhancements and abstractions. `appgyver.js` is similarly included in new projects with a `<script>` tag.
+
+Also, several APIs are only available in Legacy mode, which can be enabled from the Preview app's settings (accessible through the Settings app on iOS).
+
+The [deprecated and Legacy mode APIs](deprecated/index.md) are still available for reference, but no support is provided for them.
 
 ## Topics
 
 * [AG.ajax](topics/ajax/ajax.md)
-* [AG.camera](topics/camera/camera.md)
-* [AG.compass](topics/compass/compass.md)
-* [AG.device](topics/device/device.md)
 * [AG.events](topics/events/events.md)
-* [AG.file](topics/file/file.md)
-* [AG.geolocation](topics/geolocation/geolocation.md)
 * [AG.GUI](topics/GUI/GUI.md)
-* [AG.media](topics/media/media.md)
-* [AG.navigation](topics/navigation/navigation.md)
 * [AG.parameters](topics/parameters/parameters.md)
-* [AG.storage](topics/storage/storage.md)
 
-## The appgyver.js library explained
+## Webviews and layers
 
-The appgyver.js JavaScript library enables the communication channel between the developer's HTML5 code and the mobile device's functions. Once the DOM content of an HTML document in your app is loaded, appgyver.js core initializes and is ready to deliver messages to the device.
+AppGyver renders an app's HTML5 content in WebKit-powered **webviews**. Basically, each webview is a mobile browser without any of the browser's UI elements. Thus, everything that works on a WebKit-based mobile browser will work in AppGyver: all CSS3 stuff, `<canvas>` elements, third-party JavaScript libraries and so on.
 
-In the following sections, we will go through some core features of the appgyver.js library that are shared among individual API calls, as well as detail how they interact with the native application layer.
+An AppGyver app can run multiple webviews concurrently, although only one webview is shown at a time. The other webviews stay active in the background: JavaScript continues to run, scroll position stays the same etc. It's like leaving a browser tab open.
 
-### Callback functions
+AppGyver apps can run concurrent views in two ways: as **tab bar tabs** or as **layers**
 
-As is common in JavaScript, many methods of the appgyver.js API take `successCallback` and `failureCallback` functions as parameters. They are resolved asynchronously in appgyver.js: the callback functions are called after the method has finished talking to the native layer (e.g. the user has finished taking a picture with the camera, the device has retrieved user location etc.), enabling you to seamlessly weave native functionalities into your app. As the names imply, the `successCallback` function is called if the API call is successful and `failureCallback` is called if the API call fails.
+### openLayer
 
-To explain how callback functions work, let's look at an example from the AG.geolocation API namespace.
+When the [`AG.GUI.openLayer`](topics/GUI/methods/openLayer.md) method is called (either programmatically or by clicking on an `<a>` tag; see *Navigation extension* below), a new webview opens on top of the current one as a **layer**, complete with a native transition animation. 
+  
+The target HTML document is rendered inside the new webview, while the original webview stays active and open under the layer. 
 
-**Callback functions example**
+When you call the [`AG.GUI.popLayer`](topics/GUI/methods/popLayer.md) method, the topmost layer is removed with an animation and the layer underneath becomes the one that is rendered. Think of it as laying down a sheet of paper on top of the current view and removing it.
 
-We can get the mobile device's current GPS coordinates with the method:
+When you call the openLayer method without any parameters, the native navigation bar appears with the native back button. Clicking the back button effectively calls `popLayer` for the current layer, returning you to the webview underneath.
 
-`AG.geolocation.getCurrentLocation(successCallback(coords), failureCallback)` 
+### Tab bars
 
-If the native app layer fails to retrieve the current GPS coordinates, the `failureCallback` function is called. The code in the function is executed, e.g. an error message is displayed.
+On iOS, AppGyver apps can use the native tab bar for navigation. To enable the tab bar, the value of the `fullscreen` key in `application.json` must be set to `false`, and the project must have at least one tab bar tab defined.
 
-If the native app succeeds in retrieving the GPS coordinates, the `successCallback` function is called. The data retrieved by the API call (user GPS coordinates in this case) are passed on to the successCallback function as a parameter. In this case, `coords` contains the GPS coordinates retrieved by the device. The developer is then free to do whatever they want with the data, e.g. display it to the user.
+Each tab bar tab is an independent stack of webview layers. Thus, the state of any webviews (visible or hidden beneath the topmost layer) are preserved when the user switches to another tab and back.
+
+A tab bar tab points to an initial HTML document that will be loaded into the webview when the user starts the app.
+
+### Navigation extension
+
+The appgyver.js library includes a navigation extension by default. All `<a>` links in the HTML document are monitored. Tapping on a link opens the `href` target as a new layer (like when calling [`AG.GUI.openLayer`](topics/GUI/methods/openLayer.md)). The native back button appears on the new layer, and tapping on it closes the new layer (by programmatically calling `[`AG.GUI.popLayer`](topics/GUI/methods/popLayer.md)`). The closed layer's HTML page has a few seconds to perform any code before it is removed from the device's memory.
+
+To open links in a without showing the navigation bar, you should add the `ag_should_hide_navigation_bar=1` parameter to your link:
+
+```html
+<a href="my_doc.html?ag_should_hide_navigation_bar=1">This doesn't show the navigation bar</a>
+```
+
+### Navigation in Legacy mode
+
+In Legacy mode, AppGyver doesn't render new pages as separate layers, but rather functions more like a regular browser (the previous page is not kept active but is reloaded after the back button is pressed).  The navigation backstack for Legacy mode can be accessed via the (deprecated) [AG.navigation](deprecated/topics/navigation/navigation.md) API.
+
+## Callback functions
+
+As is common in JavaScript, methods of the appgyver.js API take `successCallback` and `failureCallback` functions as parameters. They are resolved asynchronously in appgyver.js: the callback functions are called after the method has finished talking to the native layer (e.g. the navigation bar right button is correctly shown), enabling you to seamlessly weave native functionalities into your app. As the names imply, the `successCallback` function is called if the API call is successful and `failureCallback` is called if the API call fails.
 
 **More on callbacks**
 
@@ -45,31 +67,7 @@ Each method's API documentation explains in more detail:
 * The success and failure conditions of the API calls, i.e. what happens in the native layer.
 * The type and contents of all callback parameters.
 
-Instead of giving the callback functions as parameters, you can use the appgyver.js implementation of [Deferred objects](topics/Deferred/Deferred.md) to manage them. The methods that support this return an `AG.Deferred()` object.
-
-### AppGyver views and layers
-
-The AppGyver Client renders your app's HTML5 content in WebKit-powered windows called **views**. This means that everything that works on a WebKit-based mobile browser will work in AppGyver: all fancy CSS transitions, third-party JavaScript libraries and so on. For iOS, the WebKit renderer is the same one that is used in Mobile Safari. For Android, the renderer.
-
-Currently, we are in the process of renewing our navigation and native GUI code. To help the transition, our Preview client currently has two modes: Edge and normal mode. (A project's mode can be set under its *Config* tab in Studio. Normal mode is recommended for actual development.)
-
-For the time being, Edge and normal modes have slightly different functionalities when it comes to navigation and rendering content: 
-
-In **normal mode** navigation, each tab bar tab is a separate view. This means that changing between tabs leaves the original tab view intact, including all JavaScript that might be running. When you click on a link on a page, the view loads a new HTML5 page and discards the old one. If you go back to the original page e.g. via the native back button, the content is loaded from scratch. To preserve e.g. the scroll state of the original page, you should do it via separate JavaScript.
-
-In **Edge mode** navigation, the tabs are still separate views, but by using the [`AG.GUI.openLayer`](GUI/openLayer.md) API call, you can open a new view on top of the current one as a "layer". The original page stays active and open under the layer, and once you click the native back button, the topmost layer is removed and the layer underneath becomes the one that is rendered. Think of it as laying down a new sheet of paper on top of the current view.
-
-### Cross document transitions and navigation
-
-Appgyver.js uses native animated transitions between documents and automatically maintains navigation history throughout the app. This functions in a similar way to typical browser navigation, but uses the native GUI elements instead.
-
-The appgyver.js library has the navigation extension included by default. All `<a></a>` tags in the HTML document are monitored and native transitions are triggered automatically.
-
-To disable native transitions manually, use the `data-navigation="false"` data attribute in the link tag: `<a data-navigation="false", href="myLink.html">link</a>`
-
-To disable native transitions and navigation logic for the whole project, use the appgyver.core.js library instead. If you want, you can then load the navigation extension manually by loading appgyver.extensions.navigation.js after appgyver.core.js in the HTML code.
-
-### Supported platforms
+## Supported platforms
 
 The latest version of appgyver.js is currently supported by both the [iOS](http://itunes.apple.com/us/app/appgyver-preview/id479747411) and [Android](https://play.google.com/store/apps/details?id=com.appgyver.android) versions of the Preview client.
 

@@ -19,8 +19,7 @@ AG.GUI.reloadStartURL()
 No parameters.
 
 ## Returns
-
 Nothing.
 
 ## Supported platforms
-* iOS
+* iOS (not in Legacy mode)

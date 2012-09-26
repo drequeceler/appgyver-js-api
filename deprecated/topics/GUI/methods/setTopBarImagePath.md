@@ -1,4 +1,6 @@
-# AG.GUI.setTopBarImagePath
+# ~~AG.GUI.setTopBarImagePath~~ (deprecated)
+
+*This method is deprecated and only available in Legacy mode.*
 
 ## Summary
 `setTopBarImagePath()` sets or replaces the navigation bar image. You can use an image in your application's folder.
@@ -22,4 +24,4 @@ AG.GUI.setTopBarImagePath(path)
 Nothing.
 
 ## Supported platforms
-* iOS
+* iOS (Legacy mode only)

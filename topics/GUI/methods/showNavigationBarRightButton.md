@@ -7,11 +7,9 @@ The recurring callback function is triggered when the button is tapped.
 
 The success callback function is triggered if the button was set successfully. If not, the failure callback function is triggered.
 
-This method currently works only in Edge mode.
-
 ## Quick example:
 ```javascript
-var hello = function() { AG.GUI.alert("Hello!")}
+var hello = function() { navigatior.notification.alert("I am an alert box", false, "Hello!") }
 
 AG.GUI.showNavigationBarRightButton("Say hello", hello);
 ```

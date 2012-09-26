@@ -1,9 +1,9 @@
-# AG.GUI.hideNavigationBarRightButton
+# ~~AG.GUI.hideNavigationBarRightButton~~ (deprecated)
+
+*This method is deprecated and only available in Legacy mode.*
 
 ## Summary
 `hideRightButton()` hides the native right button from the navigation bar.
-
-This method works only in normal mode.
 
 ## Quick example:
 ```javascript
@@ -23,4 +23,4 @@ None.
 Nothing.
 
 ## Supported platforms
-* iOS
+* iOS (Legacy mode only)

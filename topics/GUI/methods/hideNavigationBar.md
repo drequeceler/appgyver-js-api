@@ -3,8 +3,6 @@
 ## Summary
 `hideNavigationBar()` hides the native navigation bar for the current view.
 
-This method currently works only in Edge mode.
-
 ## Quick example:
 ```javascript
 AG.GUI.hideNavigationBar();
@@ -23,4 +21,4 @@ None.
 Nothing.
 
 ## Supported platforms
-* iOS
+* iOS (not in Legacy mode)

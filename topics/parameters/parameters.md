@@ -18,7 +18,7 @@ Currently, the API supports query strings passed as part of an HTML link.
     <script src="../appgyver/appgyver.js"></script>
     <script>
         var msg = AG.parameters.get("msg"); 
-        if (msg) AG.GUI.alert("Your parameters were:", msg);
+        if (msg) navigator.notification.alert(msg, false, "Your parameters were:");
     </script>
   </head>
   <body>

@@ -1,9 +1,9 @@
 # AG.accelerometer.addEventListener
 
 ## Summary
-`addEventListener()` adds a new accelerometer event listener to the current view. 
+`addEventListener()` adds a new accelerometer event listener to the current webview. 
 
-The event listener's callback function is triggered when the accelerometer is tracking for the current view and registers a change in the device's acceleration.
+The event listener's callback function is triggered when the accelerometer is tracking for the current webview and registers a change in the device's acceleration.
 
 ## Quick example:
 ```javascript
