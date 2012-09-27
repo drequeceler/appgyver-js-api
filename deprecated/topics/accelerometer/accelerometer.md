@@ -1,4 +1,6 @@
-# AG.accelerometer #
+# ~~AG.accelerometer~~ (deprecated methods)
+
+*The following methods are deprecated by the [Cordova APIs](http://docs.phonegap.com).*
 
 The **AG.accelerometer** namespace contains methods that give access to the mobile device's accelerometer, allowing you to track changes in the device's acceleration.
 
@@ -12,6 +14,9 @@ You can have multiple accelerometer event listeners per view. When you call the 
 * [AG.accelerometer.removeEventListener](methods/removeEventListener.md)
 * [AG.accelerometer.startTracking](methods/startTracking.md)
 * [AG.accelerometer.stopTracking](methods/stopTracking.md)
+
+## Properties ##
+* [AG.accelerometer.listener](properties/listener.md)
 
 ## Full example ##
 

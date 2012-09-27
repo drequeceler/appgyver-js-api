@@ -1,8 +1,10 @@
-# AG.media
+# ~~AG.media~~ (deprecated methods)
+
+*The following methods are deprecated by the [Cordova APIs](http://docs.phonegap.com).*
 
 The **AG.media** namespace contains methods that allow you to record and play back audio.
 
-## Methods
+## Deprecated methods
 * [AG.media.play](methods/play.md)
 * [AG.media.startRecordingAudio](methods/startRecordingAudio.md)
 * [AG.media.stopRecordingAudio](methods/stopRecordingAudio.md)

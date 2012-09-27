@@ -1,6 +1,8 @@
 # ~~AG.GUI~~ (deprecated methods)
 
-*The following methods in the AG.GUI namespace are deprecated.* 
+*The following methods in the AG.GUI namespace are deprecated. Note that AG.GUI also contains some [non-deprecated methods](../../../topics/GUI/GUI.md)* 
+
+The **AG.GUI** namespace contains methods that give access to the mobile device's native user interface elements.
 
 ## Methods deprecated by Cordova
 

@@ -1,4 +1,6 @@
-# AG.gyroscope #
+# ~~AG.gyroscope~~ (deprecated methods)
+
+*The following methods are deprecated by the [Cordova APIs](http://docs.phonegap.com).*
 
 The **AG.gyroscope** namespace contains methods that give access to the mobile device's gyroscope, allowing you to track the device's orientation in physical space.
 
@@ -12,6 +14,9 @@ You can have multiple gyroscope event listeners per view. When you call the `AG.
 * [AG.gyroscope.removeEventListener](methods/removeEventListener.md)
 * [AG.gyroscope.startTracking](methods/startTracking.md)
 * [AG.gyroscope.stopTracking](methods/stopTracking.md)
+
+## Properties
+* [AG.gyroscope.listener](properties/listener.md)
 
 ## Full example ##
 

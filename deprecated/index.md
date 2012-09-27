@@ -18,6 +18,7 @@ The following namespaces contain methods are only available in Legacy mode and t
 
 * [~~AG.navigation~~ (deprecated, Legacy mode only)](topics/navigation/navigation.md)
 * [~~AG.GUI~~ (deprecated, Legacy mode only)](topics/device/device.md)
+
   (Note that `AG.GUI` also contains some [non-deprecated methods](../topics/GUI/GUI.md).)
   
 ## AG.Deferred

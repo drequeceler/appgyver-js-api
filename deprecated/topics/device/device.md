@@ -1,4 +1,6 @@
-# AG.device #
+# ~~AG.device~~ (deprecated methods)
+
+*The following methods are deprecated by the [Cordova APIs](http://docs.phonegap.com).*
 
 The **AG.device** namespace contains methods that give access to device-specific information, including the current contents of the screen.
 

@@ -1,4 +1,6 @@
-# AG.camera #
+# ~~AG.camera~~ (deprecated methods)
+
+*The following methods are deprecated by the [Cordova APIs](http://docs.phonegap.com).*
 
 The **AG.camera** namespace contains methods that give access to the mobile device's camera, allowing you to capture pictures and video.
 

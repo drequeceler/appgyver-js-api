@@ -1,4 +1,6 @@
-# AG.storage
+# ~~AG.storage~~ (deprecated methods)
+
+*The following methods are deprecated by the [Cordova APIs](http://docs.phonegap.com).*
 
 The **AG.storage** namespace gives access to methods that allow you to save and load persistent and temporary data using the device's filesystem. Passed data objects are automatically converted to JSON strings and back.
 

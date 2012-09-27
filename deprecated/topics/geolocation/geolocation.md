@@ -1,11 +1,13 @@
-# AG.geolocation #
+# ~~AG.geolocation~~ (deprecated methods)
+
+*The following methods are deprecated by the [Cordova APIs](http://docs.phonegap.com).*
 
 The **AG.geolocation** namespace contains methods that give access to the device's native geolocation data.
 
-## Methods ##
+## Methods
 * [AG.geolocation.getCurrentLocation](methods/getCurrentLocation.md)
 
-## Full example ##
+## Full example
 
 ```html
 	<!DOCTYPE html>

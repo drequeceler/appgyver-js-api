@@ -1,4 +1,6 @@
-# AG.file #
+# ~~AG.file~~ (deprecated methods)
+
+*The following methods are deprecated by the [Cordova APIs](http://docs.phonegap.com).*
 
 The **AG.file** namespace contains methods that give access to the mobile device's files and filesystem.
 

@@ -1,4 +1,6 @@
-# AG.compass
+# ~~AG.compass~~ (deprecated)
+
+*The following methods and properties are deprecated by the [Cordova APIs](http://docs.phonegap.com).*
 
 The **AG.compass** namespace contains methods that give access to the mobile device's compass, allowing you to track the device's real-world orientation.
 

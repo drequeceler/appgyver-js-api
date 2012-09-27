@@ -1,4 +1,4 @@
-# AG.GUI.alert
+# ~~AG.GUI.alert~~ (deprecated)
 
 ## Summary
 `alert()` shows a native alert message. The title and message content are set separately. 

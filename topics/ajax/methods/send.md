@@ -7,10 +7,10 @@
 ```javascript
 	var myXMLHttpRequest = AG.ajax.send("http://my_json_location.json", {
       success: function(data){
-        AG.GUI.alert(data);
+        navigator.notification.alert(data);
       },
       failure: function(status, request){
-        AG.GUI.alert("XHR failed, status: "+status);
+        navigator.notification.alert("XHR failed, status: "+status);
       }
     });
 ```

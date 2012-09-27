@@ -53,10 +53,6 @@ To open links in a without showing the navigation bar, you should add the `ag_sh
 <a href="my_doc.html?ag_should_hide_navigation_bar=1">This doesn't show the navigation bar</a>
 ```
 
-### Navigation in Legacy mode
-
-In Legacy mode, AppGyver doesn't render new pages as separate layers, but rather functions more like a regular browser (the previous page is not kept active but is reloaded after the back button is pressed).  The navigation backstack for Legacy mode can be accessed via the (deprecated) [AG.navigation](deprecated/topics/navigation/navigation.md) API.
-
 ## Callback functions
 
 As is common in JavaScript, methods of the appgyver.js API take `successCallback` and `failureCallback` functions as parameters. They are resolved asynchronously in appgyver.js: the callback functions are called after the method has finished talking to the native layer (e.g. the navigation bar right button is correctly shown), enabling you to seamlessly weave native functionalities into your app. As the names imply, the `successCallback` function is called if the API call is successful and `failureCallback` is called if the API call fails.
