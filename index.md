@@ -13,7 +13,10 @@ The [deprecated and Legacy mode APIs](deprecated/index.md) are still available f
 ## Topics
 
 * [AG.ajax](topics/ajax/ajax.md)
+* [AG.camera](topics/camera/camera.md)
+* [AG.device](topics/device/device.md)
 * [AG.events](topics/events/events.md)
+* [AG.file](topics/file/file.md)
 * [AG.GUI](topics/GUI/GUI.md)
 * [AG.parameters](topics/parameters/parameters.md)
 
@@ -50,7 +53,7 @@ The appgyver.js library includes a navigation extension by default. All `<a>` li
 To open links in a without showing the navigation bar, you should add the `ag_should_hide_navigation_bar=1` parameter to your link:
 
 ```html
-<a href="my_doc.html?ag_should_hide_navigation_bar=1">This doesn't show the navigation bar</a>
+<a href="my_doc.html?ag_should_hide_navigation_bar=1">This link doesn't show the navigation bar</a>
 ```
 
 ## Callback functions
@@ -71,4 +74,4 @@ As an alternative to providing callback functions as parameters to the method ca
 
 The latest version of appgyver.js is currently supported by both the [iOS](http://itunes.apple.com/us/app/appgyver-preview/id479747411) and [Android](https://play.google.com/store/apps/details?id=com.appgyver.android) versions of the Preview client.
 
-The Android Preview client is still an early release and the API hasn't been implemented completely, so please see the [Android support](support/android.md) page for a list of supported API calls.
+The Android Preview client is still an early release and the API implementation is limited, so please see the [Android support](support/android.md) page for a list of supported API calls.
