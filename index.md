@@ -63,6 +63,10 @@ Each method's API documentation explains in more detail:
 * The success and failure conditions of the API calls, i.e. what happens in the native layer.
 * The type and contents of all callback parameters.
 
+### AG.Deferred
+
+As an alternative to providing callback functions as parameters to the method call, AppGyver provides an implementation of jQuery-style Deferred objects with [AG.Deferred](Deferred/Deferred.md). The supported methods return an `AG.Deferred` object.
+
 ## Supported platforms
 
 The latest version of appgyver.js is currently supported by both the [iOS](http://itunes.apple.com/us/app/appgyver-preview/id479747411) and [Android](https://play.google.com/store/apps/details?id=com.appgyver.android) versions of the Preview client.

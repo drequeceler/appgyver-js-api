@@ -11,8 +11,8 @@ The success callback function gets triggered if a suitable preview dialogue laun
 
 ## Quick example:
 ```javascript
-AG.file.preview("Application/shared/document.pdf", function(){
-  AG.GUI.alert("Success", "The file was previewed.");
+AG.file.preview("Application/www/preview.pdf", function(){
+  navigator.notification.alert("The file was previewed successfully!");
 });
 ```
 
@@ -24,7 +24,7 @@ AG.file.preview(filenameWithPath, successCallback, failureCallback)
 **Parameters**
 
 * *string* **filenameWithPath**<br>
-  A string containing the filename and path of the file to be previewed. The path is relative to the app's `views` directory.
+  A string containing the filename and path of the file to be previewed. The path is relative to the `Documents` directory on your device. Thus, a file located at `MY_PROJECT/www/preview.pdf` on your disk will be accessible via the path `Application/www/preview.pdf`.
 * *function* **successCallback**<br>
   The success callback function.
 * *function* **failureCallback**<br>

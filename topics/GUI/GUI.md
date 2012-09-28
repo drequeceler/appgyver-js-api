@@ -1,4 +1,4 @@
-# AG.GUI #
+# AG.GUI
 
 The **AG.GUI** namespace contains methods that give access to the mobile device's native user interface elements as well as opening and closing webview layers.
 

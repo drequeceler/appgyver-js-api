@@ -9,7 +9,7 @@ Note that playing .mp3 files has a slight delay compared to .wav files due to th
 
 ## Quick example:
 ```javascript
-AG.media.play("audio/myaudio.wav");
+AG.media.play("Application/www/audio/myaudio.wav");
 ```
 
 ## Syntax
@@ -20,7 +20,7 @@ AG.media.play(filename)
 **Parameters**
 
 * *string* **filename**<br>
-  The filename and path of the audio file to play. The path is relative to the app's `views` directory.
+  The filename and path of the audio file to play. The path is relative to the `Documents` directory on the phone. Thus, a file located at `MY_PROJECT/www/audio/myaudio.wav` on your disk will be accessible via the path `Application/www/audio/myaudio.wav`.
 
 ## Returns
 Nothing.

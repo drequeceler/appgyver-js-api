@@ -4,10 +4,9 @@
 
 The **AG.device** namespace contains methods that give access to device-specific information, including the current contents of the screen.
 
-## Methods ##
+## Methods deprecated by Cordova
 
 * [AG.device.getUDID](methods/getUDID.md)
-* [AG.device.takeScreenshot](methods/takeScreenshot.md)
 * [AG.device.getLocale](methods/getLocale.md)
 * [AG.device.getIPAddress](methods/getIPAddress.md)
 
@@ -48,21 +47,6 @@ The **AG.device** namespace contains methods that give access to device-specific
           });
       });
 
-      // device.takeScreenshot
-      document.getElementById("takeScreenshot").addEventListener("touchstart", function(){
-        AG.device.takeScreenshot(
-          // successCallback
-          function(obj){
-            var img = document.createElement("img");
-            img.src = obj.screenshot;
-            document.body.appendChild(img);
-          },
-          // failureCallback
-          function(){
-            AG.GUI.alert("Could not take screenshot");
-          });
-      });
-
       // device.getLocale
       document.getElementById("getLocale").addEventListener("touchstart", function(){
         AG.device.getLocale(
@@ -84,7 +68,6 @@ The **AG.device** namespace contains methods that give access to device-specific
     <button id="getUDID">Get device's UDID</button><br /><br />
     <button id="getIP">Get device's IP</button><br /><br />
     <button id="getLocale">Get device's locale data</button><br /><br />
-    <button id="takeScreenshot">Take screenshot</button><br /><br />
   </body>
 </html>
 ```

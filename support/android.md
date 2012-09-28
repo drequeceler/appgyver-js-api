@@ -11,6 +11,6 @@ Methods written in ~~strikethrough~~ are deprecated in favor of the [Cordova API
 * [AG.events.addEventListener](../topics/events/methods/addEventListener.md) 
 * [AG.events.removeAllEventListeners](../topics/events/methods/removeAllEventListeners.md)
 * [~~AG.file.download~~](../topics/file/methods/download.md)
-* [~~AG.file.preview~~](../topics/file/methods/preview.md)
-* [~~AG.file.unzip~~](../topics/file/methods/unzip.md)
+* [AG.file.preview](../topics/file/methods/preview.md)
+* [AG.file.unzip](../topics/file/methods/unzip.md)
 * [~~AG.GUI.alert~~](../topics/GUI/methods/alert.md)
