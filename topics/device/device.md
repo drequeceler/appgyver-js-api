@@ -18,7 +18,7 @@ The **AG.device** namespace contains methods that give access to device-specific
     document.addEventListener("DOMContentLoaded", function(){
 
       // device.takeScreenshot
-      document.getElementById("takeScreenshot").addEventListener("touchstart", function(){
+      document.querySelector("#takeScreenshot").addEventListener("touchstart", function(){
         AG.device.takeScreenshot(
           // successCallback
           function(obj){

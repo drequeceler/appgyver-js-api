@@ -7,7 +7,7 @@ The success callback function gets triggered after the file has been successfull
 
 ## Quick example:
 ```javascript
-AG.file.unzip("Application/shared/assets/stuff.zip", "Application/www/unzip_here/", function(){
+AG.file.unzip("Application/www/assets/stuff.zip", "Application/www/unzip_here/", function(){
   navigator.notification.alert("File was unzipped successfully!");
 });
 ```
