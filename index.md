@@ -1,10 +1,10 @@
 # appgyver.js API documentation, version 0.9.2
 
-As of version 0.9.2, AppGyver uses [Apache Cordova](http://incubator.apache.org/cordova/) (also distributed as PhoneGap) as the main native bridge between your JavaScript and the native wrapper app. New projects in AppGyver Studio automatically include a `<script src="http://localhost/cordova-2.0.0.js">` tag to load the Cordova library.
+As of version 0.9.2, AppGyver uses [Apache Cordova](http://incubator.apache.org/cordova/) (also distributed as PhoneGap) as the main native bridge between your JavaScript code and the native wrapper app. You must include Cordova's JavaScript library to all HTML documents in an AppGyver app: simply add a `<script src="http://localhost:13101/cordova-2.0.0.js">` tag in the `<head>` tag, before any Cordova API calls.
 
 **We've deprecated most of the old `appgyver.js` APIs in favor of Cordova.** Please see the [Cordova API documentation](http://docs.phonegap.com) for a list of supported APIs.
 
-However, there are some things that Cordova doesn't provide, so `appgyver.js` remains to give you access to AppGyver's native UI elements, navigation magic and other enhancements and abstractions. `appgyver.js` is similarly included in new projects with a `<script>` tag.
+However, there are some things that Cordova doesn't provide, so `appgyver.js` remains to give you access to AppGyver's native UI elements, navigation magic and other enhancements and abstractions. A `<script>` tag that loads `appgyver.js` is included in new projects in Studio.
 
 Also, several APIs are only available in Legacy mode, which can be enabled from the Preview app's settings (accessible through the Settings app on iOS).
 

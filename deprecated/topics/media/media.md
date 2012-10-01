@@ -1,11 +1,10 @@
 # ~~AG.media~~ (deprecated methods)
 
-*The following methods are deprecated by the [Cordova APIs](http://docs.phonegap.com).*
+*The following methods are deprecated by the [Cordova APIs](http://docs.phonegap.com). Note that AG.media also contains [non-deprecated methods](../../../topics/media/media.md).*
 
 The **AG.media** namespace contains methods that allow you to record and play back audio.
 
 ## Deprecated methods
-* [AG.media.play](methods/play.md)
 * [AG.media.startRecordingAudio](methods/startRecordingAudio.md)
 * [AG.media.stopRecordingAudio](methods/stopRecordingAudio.md)
 
@@ -34,7 +33,6 @@ The **AG.media** namespace contains methods that allow you to record and play ba
       
       document.querySelector("button#start_record").addEventListener("touchstart", startRecord);
       document.querySelector("button#stop_record").addEventListener("touchstart", stopRecord);
-      document.querySelector("button#play").addEventListener("touchstart", play);
       
     });
     </script>
@@ -43,7 +41,6 @@ The **AG.media** namespace contains methods that allow you to record and play ba
     <h1>AG.media example</h1>
     <button id="start_record">Start recording</button>
     <button id="stop_record">Stop recording</button>
-    <button id="play">Play</button>
  
   </body>
 </html>
