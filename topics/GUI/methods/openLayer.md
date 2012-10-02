@@ -7,20 +7,22 @@ By default, the new layer includes a native back button that will close the laye
 
 ## Quick example:
 ```javascript
-AG.GUI.openLayer("second_level/index.html", true);
+AG.GUI.openLayer("second_level/index.html", { hidesNavigationBar: true });
 ```
 
 ## Syntax
 ```javascript
-AG.GUI.openLayer(location, hidesNavigationBar)
+AG.GUI.openLayer(location, options)
 ```
 
 **Parameters**
 
 * *string* **location**<br>
   The local URL pointing to the HTML document that will be opened on the new layer.
-* *boolean* **hidesNavigationBar**<br>
-  When set to `true`, the new layer opens without the native navigation bar. [`AG.GUI.popLayer`](popLayer.md) can then be used to close the layer.
+* *JSON* **options**
+  A JSON object containing the options for the method call as key-value pairs:
+	* *boolean* **hidesNavigationBar**
+  	When set to `true`, the new layer opens without the native navigation bar. [`AG.GUI.popLayer`](popLayer.md) can then be used to close the layer.
 
 ## Returns
 Nothing.
