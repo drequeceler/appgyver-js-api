@@ -9,7 +9,7 @@ The success callback function is triggered if the button was set successfully. I
 
 ## Quick example:
 ```javascript
-var hello = function() { navigatior.notification.alert("I am an alert box", false, "Hello!") }
+var hello = function() { navigator.notification.alert("I am an alert box", false, "Hello!") }
 
 AG.GUI.showNavigationBarRightButton("Say hello", hello);
 ```
