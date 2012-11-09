@@ -18,7 +18,7 @@ The [deprecated and Legacy mode APIs](deprecated/index.md) are still available f
 * [AG.events](topics/events/events.md)
 * [AG.file](topics/file/file.md)
 * [AG.GUI](topics/GUI/GUI.md)
-* [AG.media](topics/media/media.md)
+* [AG.media](topics/media/media.md)
 * [AG.parameters](topics/parameters/parameters.md)
 
 ## Webviews and layers
