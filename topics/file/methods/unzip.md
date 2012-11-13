@@ -7,7 +7,7 @@ The success callback function gets triggered after the file has been successfull
 
 ## Quick example:
 ```javascript
-AG.file.unzip("Application/shared/assets/stuff.zip", "Application/shared/unzip_here/", function(){
+AG.file.unzip("Application/assets/stuff.zip", "Application/unzip_here/", function(){
   navigator.notification.alert("File was unzipped successfully!");
 });
 ```
@@ -20,7 +20,7 @@ AG.file.unzip(filenameWithPath, toPath, successCallback, failureCallback)
 **Parameters**
 
 * *string* **filenameWithPath**<br>
-  A string containing the filename and path of the file to be unzipped. The path is relative to the `Documents` directory on your device. Thus, a file located at `MY_PROJECT/views/shared/myzip.zip` on your disk will be accessible via the path `Application/shared/myzip.zip` (the `views` folder is removed when the app is downloaded onto the mobile device's file system).
+  A string containing the filename and path of the file to be unzipped. The path is relative to the `Documents` directory on your device. Thus, a file located at `MY_PROJECT/views/myzip.zip` on your disk will be accessible via the path `Application/myzip.zip` (the contents of the `views` folder are copied to the `Application` folder on the mobile device).
 * *string* **toPath**<br>
   A string containing the path where the file will be unzipped. The path is relative to the `Documents` directory on your device.
 * *function* **successCallback**<br>

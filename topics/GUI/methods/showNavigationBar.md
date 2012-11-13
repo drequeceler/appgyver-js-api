@@ -20,7 +20,7 @@ AG.GUI.showNavigationBar(options)
   * *string* **title**<br>
     The text to be shown on the navigation bar.
   * *string* **titleImagePath**<br>
-    A file path, pointing to an image to be shown on the navigation bar. The path is relative to the `Documents` folder on your mobile device, so an image in `MY_PROJECT/views/shared/img/navbar.png` on your disk will be accessible via the path `Application/shared/img/navbar.png` (the `views` folder is removed when the app is downloaded onto the mobile device's file system). Setting a `titleImagePath` overrides the `title` text.
+    A file path, pointing to an image to be shown on the navigation bar. The path is relative to the `Documents` folder on your mobile device, so an image in `MY_PROJECT/views/img/navbar.png` on your disk will be accessible via the path `Application/img/navbar.png` (the contents of the `views` folder are copied to the `Application` folder on the mobile device). Setting a `titleImagePath` overrides the `title` text.
 
 ## Returns
 Nothing.

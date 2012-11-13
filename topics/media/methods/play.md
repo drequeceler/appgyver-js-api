@@ -20,7 +20,7 @@ AG.media.play(filename)
 **Parameters**
 
 * *string* **filename**<br>
-  The filename and path of the audio file to play. The path is relative to the `Documents` directory on the phone. Thus, a file located at `MY_PROJECT/views/shared/audio/myaudio.wav` on your disk will be accessible via the path `Application/shared/audio/myaudio.wav` (the `views` folder is removed when the app is downloaded onto the mobile device's file system).
+  The filename and path of the audio file to play. The path is relative to the `Documents` directory on the phone. Thus, a file located at `MY_PROJECT/views/audio/myaudio.wav` on your disk will be accessible via the path `Application/audio/myaudio.wav` (the contents of the `views` folder are copied to the `Application` folder on the mobile device).
 
 ## Returns
 Nothing.
