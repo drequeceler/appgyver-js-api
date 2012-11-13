@@ -1,6 +1,6 @@
 # Android support
 
-The [Android Preview client](https://play.google.com/store/apps/details?id=com.appgyver.android) currently implements only a part of the appgyver.js API. No Legacy mode APIs are available on the Android.
+The [Android Preview client](https://play.google.com/store/apps/details?id=com.appgyver.android) currently implements only a part of the appgyver.js API.
 
 All [Cordova APIs](http://docs.phonegap.com) (apart from `navigator.notification.vibrate`) do work correctly on Android.
 

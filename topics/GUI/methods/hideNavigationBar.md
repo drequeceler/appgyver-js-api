@@ -21,4 +21,4 @@ None.
 Nothing.
 
 ## Supported platforms
-* iOS (not in Legacy mode)
+* iOS

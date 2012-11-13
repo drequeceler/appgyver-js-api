@@ -2,6 +2,8 @@
 
 The following API namespaces contain methods that are deprecated, most of them because Cordova offers the same functionality. The methods still function (for the most part), but [Cordova's APIs](http://docs.phonegap.com) provide our recommended way for communicating with your mobile device. We provide no support for deprecated APIs.
 
+With the release of [AppGyver Scanner](https://itunes.apple.com/app/appgyver-scanner/id575076515?mt=8), Legacy mode APIs are fully deprecated and unsupported. For earlier versions of the Preview app, the Legacy mode can be enabled from the Preview app's settings, accessible through the Settings app on iOS.
+
 Some API namespaces listed below (such as AG.file and AG.GUI) also contain non-deprecated methods; these methods are not listed here. See the [front page](../index.md) for a list of currently active and supported APIs.
 
 ## List of deprecated API namespaces

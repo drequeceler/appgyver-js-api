@@ -1,14 +1,14 @@
 # appgyver.js API documentation, version 0.9.3
 
+*Note that projects using `appgyver.js` version 0.9.3 require the [AppGyver Scanner](https://itunes.apple.com/app/appgyver-scanner/id575076515?mt=8) app for Local and Cloud Build preview.*
+
 AppGyver uses [Apache Cordova](http://incubator.apache.org/cordova/) (also distributed as PhoneGap) as the main native bridge between your JavaScript code and the native wrapper app. You must include Cordova's JavaScript library to all HTML documents in an AppGyver app: simply add a `<script src="http://localhost:13101/cordova.js"></script>` tag in your HTML document's `<head>` tag, before any Cordova API call. AppGyver currently uses Cordova version 2.2.0.
 
 **We've deprecated most of the old `appgyver.js` APIs in favor of Cordova.** Please see the [Cordova API documentation](http://docs.phonegap.com) for a list of supported APIs.
 
 However, there are some things that Cordova doesn't provide, so `appgyver.js` remains to give you access to AppGyver's native UI elements, navigation magic and other enhancements and abstractions. The `appgyver.js` library is available in the `Documents/Application/appgyver/` folder on your mobile device. So, if your HTML document is `MY_PROJECT/views/index.html`, the tag to load the library file is `<script src="appgyver/appgyver.js"></script>` (since the content of the `views` folder is copied to the `Documents/Application` folder on your mobile device).
 
-Also, several APIs are only available in Legacy mode, which can be enabled from the Preview app's settings (accessible through the Settings app on iOS).
-
-The [deprecated and Legacy mode APIs](deprecated/index.md) are still available for reference, but no support is provided for them.
+The [deprecated APIs](deprecated/index.md) are still available for reference, but no support is provided for them.
 
 ## Topics
 

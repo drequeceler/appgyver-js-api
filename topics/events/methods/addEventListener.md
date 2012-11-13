@@ -38,15 +38,5 @@ AG.events.addEventListener(event, successCallback)
 
 Nothing.
 
-## Legacy mode
-
-In Legacy mode, the available events are:
-
-* **focus**<br>
- Happens when the current tab bar view gains focus (after switching to another tab).
-* **topDoubleTapped**<br>
- Happens when the user double-taps the navigation bar.
-
-
 ## Supported platforms
 * iOS, Android

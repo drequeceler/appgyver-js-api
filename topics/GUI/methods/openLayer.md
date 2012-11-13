@@ -53,4 +53,4 @@ AG.GUI.openLayer(location, options)
 Nothing.
 
 ## Supported platforms
-* iOS (not in Legacy mode)
+* iOS
