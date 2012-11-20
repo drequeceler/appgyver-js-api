@@ -1,8 +1,10 @@
 # Android support
 
-The [Android Preview client](https://play.google.com/store/apps/details?id=com.appgyver.android) currently implements only a part of the appgyver.js API.
+The [Android Preview app](https://play.google.com/store/apps/details?id=com.appgyver.android) currently implements only a part of the appgyver.js API. Furthermore, the current version of [AppGyver Toolbelt](http://www.appgyver.com/toolbelt) is designed to work with the presently iOS-only [AppGyver Scanner app](https://itunes.apple.com/app/appgyver-scanner/id575076515?mt=8). 
 
-All [Cordova APIs](http://docs.phonegap.com) (apart from `navigator.notification.vibrate`) do work correctly on Android.
+Even though the latest AppGyver Studio only serves a QR code for Local Preview, you can still input your computer's IP address into the Android Preview app to connect it to AppGyver Studio and get the Preview flow working.
+
+All [Cordova APIs](http://docs.phonegap.com) (apart from `navigator.notification.vibrate`) do work correctly on Android. The Android runtime uses Cordova version 2.0.0. On Android, the `cordova-2.0.0.js` must be loaded from a local directory.
 
 ## Supported API calls
 

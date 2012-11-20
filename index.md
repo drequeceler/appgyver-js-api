@@ -73,6 +73,6 @@ As an alternative to providing callback functions as parameters to the method ca
 
 ## Supported platforms
 
-The latest version of appgyver.js is currently supported by both the [iOS](http://itunes.apple.com/us/app/appgyver-preview/id479747411) and [Android](https://play.google.com/store/apps/details?id=com.appgyver.android) versions of the Preview client.
+The latest version of appgyver.js is currently supported by the [iOS](https://itunes.apple.com/app/appgyver-scanner/id575076515?mt=8) version of the AppGyver Scanner app.
 
 The Android Preview client is still an early release and the API implementation is limited, so please see the [Android support](support/android.md) page for a list of supported API calls.
