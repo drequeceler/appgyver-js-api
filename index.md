@@ -18,7 +18,7 @@ The [deprecated APIs](deprecated/index.md) are still available for reference, bu
 * [AG.events](topics/events/events.md)
 * [AG.file](topics/file/file.md)
 * [AG.GUI](topics/GUI/GUI.md)
-* [AG.media](toipcs/media/media.md)
+* [AG.media](topics/media/media.md)
 * [AG.parameters](topics/parameters/parameters.md)
 
 ## Webviews and layers
